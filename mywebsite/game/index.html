@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="赛博朋克风中英单词配对网页游戏。">
+  <meta name="theme-color" content="#05070d">
+  <title>NEON LEXICON | 单词矩阵</title>
+  <link rel="stylesheet" href="game.css">
+  <script defer src="vendor/xlsx.full.min.js"></script>
+  <script defer src="game.js"></script>
+</head>
+<body>
+  <canvas id="game-canvas" aria-hidden="true"></canvas>
+  <header class="game-header">
+    <a href="../projects.html" class="back-link">← 返回项目展示</a>
+    <div class="logo">NEON <span>LEXICON</span></div>
+    <button class="sound-btn" type="button" aria-pressed="true" aria-label="关闭游戏音效">SFX ON</button>
+  </header>
+
+  <main class="game-shell">
+    <section class="intro">
+      <p class="code">TRAINING MODULE // WORD MATCH</p>
+      <h1>单词<span>矩阵</span></h1>
+      <p>翻开卡片，让英文单词与中文释义完成连接。每局会从你的词库中抽取最多六组，完成全部配对即可解除词库封锁。</p>
+    </section>
+
+    <section class="hud" aria-label="游戏状态">
+      <div><span>TIME</span><strong id="time">60</strong></div>
+      <div><span>MOVES</span><strong id="moves">0</strong></div>
+      <div><span>LINKS</span><strong><b id="matches">0</b>/<b id="pair-total">6</b></strong></div>
+      <div><span>SCORE</span><strong id="score">0000</strong></div>
+    </section>
+
+    <section class="game-panel">
+      <div class="status-line"><span id="status" role="status">点击任意卡片开始训练</span><button id="restart" type="button">重新载入</button></div>
+      <div class="board" id="board" aria-label="单词配对卡片区域"></div>
+    </section>
+
+    <section class="vocab-panel" aria-labelledby="vocab-title">
+      <div class="vocab-heading">
+        <div>
+          <p class="code">LEXICON CONTROL // LOCAL DATABASE</p>
+          <h2 id="vocab-title">扩展单词矩阵</h2>
+        </div>
+        <div class="vocab-count">词库容量 <strong id="word-count">6</strong></div>
+      </div>
+      <form id="word-form" class="word-form">
+        <label>英文单词<input id="english-input" name="english" type="text" autocomplete="off" maxlength="60" placeholder="例如：finance" required></label>
+        <label>中文释义<input id="chinese-input" name="chinese" type="text" autocomplete="off" maxlength="80" placeholder="例如：金融" required></label>
+        <button type="submit">添加单词</button>
+      </form>
+      <div class="import-zone">
+        <div>
+          <strong>从 Excel 批量导入</strong>
+          <p>支持 .xlsx、.xls、.csv。可识别“英文单词 / 中文释义”等常见表头；没有表头时读取前两列。</p>
+        </div>
+        <div class="import-actions">
+          <label class="file-trigger">选择文件<input id="word-file" type="file" accept=".xlsx,.xls,.csv"></label>
+          <a href="单词导入模板.xlsx" download>下载 Excel 模板</a>
+          <button id="reset-words" class="danger-action" type="button">恢复默认词库</button>
+        </div>
+      </div>
+      <p id="vocab-message" class="vocab-message" role="status" aria-live="polite">新增和导入的单词只保存在当前浏览器中。</p>
+    </section>
+
+    <section class="instructions">
+      <div><b>01</b><span>点击两张卡片</span></div><div><b>02</b><span>连接英文与中文</span></div><div><b>03</b><span>60秒内完成本局配对</span></div>
+    </section>
+  </main>
+
+  <dialog id="result-dialog">
+    <div class="result-box">
+      <p class="code">MISSION REPORT</p>
+      <h2 id="result-title">训练完成</h2>
+      <p id="result-copy"></p>
+      <div class="result-stats"><span>最终得分</span><strong id="final-score">0000</strong></div>
+      <div class="result-actions"><button id="play-again" type="button">再次挑战</button><a href="../projects.html">返回项目</a></div>
+    </div>
+  </dialog>
+</body>
+</html>

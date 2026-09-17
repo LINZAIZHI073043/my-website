@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="林载贽的赛博朋克风个人网站。">
+  <meta name="theme-color" content="#05070d">
+  <title>林载贽 | 个人网站入口</title>
+  <link rel="stylesheet" href="css/shell.css">
+  <script defer src="js/shell.js"></script>
+</head>
+<body>
+  <canvas id="shell-canvas" aria-hidden="true"></canvas>
+
+  <section class="entry-gate" id="entry-gate" aria-labelledby="entry-title">
+    <div class="gate-frame">
+      <p class="gate-code">NEURAL LINK // AUTHORIZATION REQUIRED</p>
+      <h1 id="entry-title">林载贽的<br><span>数字空间</span></h1>
+      <p>音乐与视觉系统已经就绪。点击下方按钮连接个人节点。</p>
+      <button id="enter-site" type="button"><span>连接并进入</span><b>ENTER</b></button>
+      <small>点击即代表允许本页面播放背景音乐</small>
+    </div>
+  </section>
+
+  <iframe id="site-frame" src="home.html" title="林载贽的个人网站" allow="autoplay"></iframe>
+
+  <div class="shell-player" id="shell-player" hidden>
+    <button id="shell-audio-toggle" type="button" aria-label="暂停背景音乐">Ⅱ</button>
+    <div><strong>NOW PLAYING</strong><span>I Really Want to Stay at Your House</span></div>
+  </div>
+  <audio id="persistent-audio" loop preload="auto">
+    <source src="assets/music.mp3" type="audio/mpeg">
+  </audio>
+</body>
+</html>

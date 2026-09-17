@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" role="img" aria-labelledby="title desc">
+  <title id="title">赛博朋克个人头像占位图</title>
+  <desc id="desc">由霓虹青色和洋红色线条组成的未来人物头像，可替换为个人照片。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07111f"/>
+      <stop offset="1" stop-color="#13051b"/>
+    </linearGradient>
+    <linearGradient id="coat" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#35f2ff" stop-opacity=".85"/>
+      <stop offset="1" stop-color="#ff3bd4" stop-opacity=".72"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse"><path d="M50 0H0V50" fill="none" stroke="#35f2ff" stroke-opacity=".12"/></pattern>
+  </defs>
+  <rect width="800" height="1000" fill="url(#bg)"/>
+  <rect width="800" height="1000" fill="url(#grid)"/>
+  <circle cx="400" cy="320" r="210" fill="#0a1727" stroke="#35f2ff" stroke-width="3" opacity=".85"/>
+  <path d="M180 920c25-250 130-340 220-340s195 90 220 340" fill="#08101d" stroke="url(#coat)" stroke-width="16"/>
+  <path d="M300 610l100 120 100-120 65 310H235z" fill="#10182a" stroke="#ff3bd4" stroke-width="3"/>
+  <path d="M292 260c12-125 215-147 245-10l-22 212c-18 91-94 135-119 135-31 0-101-47-115-135z" fill="#14243a" stroke="#35f2ff" stroke-width="5"/>
+  <path d="M278 292c22-170 250-173 272 3-62-28-105-82-132-123-31 65-78 104-140 120z" fill="#050a12" stroke="#ff3bd4" stroke-width="6"/>
+  <path d="M319 363h64M420 363h64" stroke="#f9f871" stroke-width="12" stroke-linecap="round" filter="url(#glow)"/>
+  <path d="M383 363h37" stroke="#f9f871" stroke-width="5"/>
+  <path d="M399 379v68l-25 12" fill="none" stroke="#35f2ff" stroke-width="4"/>
+  <path d="M350 500c28 22 72 22 101 0" fill="none" stroke="#ff3bd4" stroke-width="5" stroke-linecap="round"/>
+  <path d="M276 401l-56 42v90l65 40M524 401l56 42v90l-65 40" fill="none" stroke="#35f2ff" stroke-width="7" filter="url(#glow)"/>
+  <g font-family="monospace" fill="#35f2ff" font-size="22" opacity=".7">
+    <text x="36" y="70">ID // NOVA</text><text x="36" y="102">STATUS // ONLINE</text>
+    <text x="570" y="92">HUMAN</text><text x="570" y="124">VERSION 1.0</text>
+  </g>
+  <path d="M26 180h180M594 180h180M26 820h120M654 820h120" stroke="#ff3bd4" stroke-width="4" filter="url(#glow)"/>
+</svg>

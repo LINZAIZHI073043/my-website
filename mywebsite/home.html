@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="赛博朋克风学生个人网站，展示个人介绍、大学生涯规划、技能、项目与联系方式。">
+  <meta name="theme-color" content="#05070d">
+  <title>林载贽 | 未来工程师</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script defer src="js/main.js"></script>
+</head>
+<body data-page="home">
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <canvas id="matrix-canvas" aria-hidden="true"></canvas><div class="grid-floor" aria-hidden="true"></div><div class="cursor-glow" aria-hidden="true"></div>
+  <header class="site-header">
+    <nav class="nav-shell" aria-label="主导航">
+      <a class="brand" href="home.html">&lt;<span>NOVA</span>/&gt;</a>
+      <div class="nav-links" id="nav-links">
+        <a class="active" href="home.html">首页</a><a href="about.html">关于我</a><a href="roadmap.html">四年规划</a><a href="projects.html">项目展示</a><a href="contact.html">联系我</a>
+      </div>
+      <div class="nav-tools"><button class="icon-btn edit-profile" type="button" aria-label="编辑个人信息">ID</button><button class="menu-toggle" type="button" aria-controls="nav-links" aria-expanded="false" aria-label="打开导航">☰</button></div>
+    </nav>
+  </header>
+
+  <main id="main" class="page-shell">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">SYSTEM ONLINE // PERSONAL NODE 01</p>
+        <h1><span class="glitch" data-text="你好">你好</span><br><span data-profile="name">林载贽</span></h1>
+        <p class="type-line" data-typing="计算机科学学生|未来全栈工程师|持续进化的数字创造者"></p>
+        <p class="hero-copy">我是一名就读于 <strong data-profile="school">华中科技大学</strong> 的 <strong data-profile="major">金融学</strong> 学生。这里记录我的技能升级、项目实践与大学四年成长路线。</p>
+        <div class="hero-actions"><a class="btn" href="projects.html">进入项目仓库 →</a><a class="btn secondary" href="roadmap.html">查看成长协议</a></div>
+      </div>
+      <div class="hero-visual reveal">
+        <figure class="avatar-frame" data-tilt>
+          <img src="assets/avatar.jpg" alt="个人头像">
+          <figcaption class="avatar-meta">SUBJECT: <span data-profile="name">林载贽</span><br>ROLE: FUTURE ENGINEER<br>STATE: BUILDING...</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="system-strip reveal" aria-label="个人状态概览">
+      <div><strong>01</strong><span>当前阶段 / 大学成长中</span></div><div><strong data-clock>--:--:--</strong><span>本地节点时间</span></div><div><strong>∞</strong><span>保持好奇 / 持续学习</span></div><div><strong data-profile="city">武汉</strong><span>当前坐标</span></div>
+    </section>
+
+    <section class="section">
+      <div class="section-head reveal"><div><p class="eyebrow">QUICK ACCESS</p><h2 class="section-title">访问我的<span>数字档案</span></h2><p class="section-desc">从个人故事到可运行项目，每个页面都是成长记录的一部分。</p></div><span class="section-code">NODE_MAP / 04</span></div>
+      <div class="cards">
+        <a class="panel reveal" href="about.html" style="text-decoration:none"><span class="number">01 // IDENTITY</span><h3>关于我</h3><p>个人简介、兴趣方向、技能矩阵与正在学习的技术。</p></a>
+        <a class="panel reveal" href="roadmap.html" style="text-decoration:none"><span class="number">02 // ROADMAP</span><h3>大学四年规划</h3><p>大一探索、大二定向、大三冲刺、大四实现的行动路线。</p></a>
+        <a class="panel reveal" href="game/index.html" style="text-decoration:none"><span class="number">03 // PLAYABLE</span><h3>单词矩阵游戏</h3><p>点击即玩的中英词义配对游戏，验证网页交互能力。</p></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="footer-shell"><div><strong>&lt;NOVA/&gt;</strong><br>用代码记录成长，用创造回应未来。</div><div>© <span data-year></span> <span data-profile="name">林载贽</span> // 持续更新中</div></div></footer>
+  <div class="audio-dock"><button class="icon-btn audio-toggle" type="button" aria-label="播放背景音乐">▶</button><div class="audio-meta"><strong>BACKGROUND AUDIO</strong><span>I Really Want to Stay at Your House</span></div><audio id="bg-audio" loop preload="metadata"><source src="assets/music.mp3" type="audio/mpeg"></audio></div>
+
+  <dialog class="profile-dialog" id="profile-dialog"><form method="dialog" class="dialog-inner" id="profile-form"><div class="dialog-head"><h2>编辑身份信息</h2><button class="icon-btn" value="cancel" aria-label="关闭">×</button></div><p class="section-desc">信息仅保存在当前浏览器，不会上传。</p><div class="form-grid"><div class="field"><label for="pf-name">姓名</label><input id="pf-name" name="name" required></div><div class="field"><label for="pf-school">学校</label><input id="pf-school" name="school"></div><div class="field"><label for="pf-major">专业</label><input id="pf-major" name="major"></div><div class="field"><label for="pf-city">城市</label><input id="pf-city" name="city"></div><div class="field full"><label for="pf-email">邮箱</label><input id="pf-email" name="email" type="email"></div></div><div class="dialog-actions"><button class="btn secondary small" type="button" data-reset-profile>恢复默认</button><button class="btn small" value="default">保存</button></div></form></dialog>
+</body>
+</html>
