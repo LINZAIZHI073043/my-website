@@ -101,4 +101,4 @@
 
   提交前建议检查主页、音乐、所有导航链接、单词游戏和 Excel 导入。现有维护说明也可以查看 OneDrive/Desktop/mywebsite/
   README.md。
-2026.9.19更新：更换了背景音乐“I really want to stay at your house”的版本.
+```text
