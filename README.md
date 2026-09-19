@@ -35,3 +35,5 @@
    ├─ game.css
    └─ game.js
 ```
+## 更新日志
+2026.9.19 更换背景音乐”I really want to stay at your house“的版本以优化体验.
